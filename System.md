@@ -52,7 +52,17 @@
 
 10. Name the command that lists the partition tables of drives?
 
+    - The partition table divides the disk into segments / sectors
+
+    - `fdisk -l`
+
 11. Name the command that displays the available space left and used on the system in an humanly understandable way
+
+    - `df -h`
+
+    - `du` is used to estimate file space usage—space used under a particular directory or files on a file system.
+ 
+    - `df` is used to display the amount of available disk space for file systems on which the invoking user has appropriate read access.
 
 12. Figure out the exact size of each folder of /var in a humanly understandable way followed by the path of it.
 
