@@ -66,19 +66,51 @@
 
 12. Figure out the exact size of each folder of /var in a humanly understandable way followed by the path of it.
 
+    - `sudo du [var / any folder path you want]`
+
 13. Name the command that find, in real time, currently running processes
+
+    - `top`
 
 14. Run the ‘tail -f /var/log/syslog‘ command in background
 
+    - I do not have the syslog file in the `/var/log/` directory
+
+    - But the reason to run a command in the background is due to the fact that sometimes processes take a while to run
+        
+        -  There are 2 ways to do this:
+            
+            - Add an Ampersand (`&`)After Your Command 
+            
+            - Use `bg` to Send Running Commands to the Background (Doesn't work on my computer)
+
 15. Find the command that kills the background command’s process
+
+    - `pkill -f [background process]`
 
 16. Find the service which makes it possible to run specific tasks following a regular schedule
 
+    - `cron`
+
+    - `Cron` is a system service that runs in the background, checks for scheduled tasks, and executes them if it finds any. 
+        
+        - The tasks -- also called "cron jobs" -- are defined in special configuration files (crontabs), which cron scans every minute.
+
+    - `cron -e`: to schedule tasks
+
 17. Find the command that allows you to connect via ssh on the VM.(In parallel with the graphic session)
+
+    - `ssh [username]@[host_ip_address] -p [port to connect on the remote host]`
 
 18. Find the command that kills ssh service
 
+    - `sudo service ssh stop` 
+
+    - `exit`: when you are in a SSH session
+
 19. List all services which are started at boot time and name this kind of services
+
+    - `systemctl list-unit-files --type service --state=enabled`
 
 20. List all existing users on the VM
 
