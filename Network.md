@@ -66,3 +66,28 @@ for these interfaces. Only the list of names.
     - `tracepath [url]`
 
 10. Identify the network devices between your computer and the slash16.org domain
+    
+    - `tracepath [url]`  (tracert in mac)
+
+11. Use the output of the previous command to find the name and IP address of the
+device that makes the link between you (local network) and the outside world
+
+    - `tracepath -b [url]` (tracert in mac) 
+
+12. Find the IP that was assigned to you by dhcp server
+
+    - `ip -4 addr` (Because I am using Linux)
+
+13. Thanks to the previous question and the reverse DNS find the name of your host
+
+    - `hostname` (Not sure about this one)
+
+14. What file contains the local DNS entries?
+
+    - `/etc/hosts`  
+
+15. Make the intra.42.fr address reroute to 46.19.122.85
+    
+    - `echo '46.19.122.85	intra.42.fr' >> /etc/hosts`
+
+    - You will need superuser right to do this, but I am not going to 
