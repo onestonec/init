@@ -78,6 +78,8 @@ device that makes the link between you (local network) and the outside world
 
     - `ip -4 addr` (Because I am using Linux)
 
+    - `dig +short myip.opendns.com @resolver1.opendns.com`: determines the public IP address
+
 13. Thanks to the previous question and the reverse DNS find the name of your host
 
     - `hostname` (Not sure about this one)
@@ -91,3 +93,9 @@ device that makes the link between you (local network) and the outside world
     - `echo '46.19.122.85	intra.42.fr' >> /etc/hosts`
 
     - You will need superuser right to do this, but I am not going to 
+
+---
+
+- `dig` uses the OS resolver libraries. `nslookup` uses is own internal ones.
+
+   - `nslookup` is deprecated 
